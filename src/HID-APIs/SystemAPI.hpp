@@ -53,7 +53,7 @@ void SystemAPI::releaseAll(void){
 }
 
 void SystemAPI::press(SystemKeycode s){
-#ifdef USBCON
+#ifdef __AVR__
 	if (s == SYSTEM_WAKE_UP)
 		USBDevice.wakeupHost();
 	else
